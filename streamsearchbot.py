@@ -24,16 +24,16 @@ torrentbot = bot.start(bot_token=Config.BOT_TOKEN)
 async def search(event):
     replied_user = await event.client(GetFullUserRequest(event.sender_id))
     firstname = replied_user.user.first_name
-    await event.reply(message=f"**Hello, {firstname}, I Am Inline Stream Search Bot.** \n**Using Me You Can Fetch Torrent Magnet, Youtube Videos Link, Jio Saavan Music Links** \n**(C) @STARKGANG**",
+    await event.reply(message=f"**Hello, {firstname}, I Am Inline Stream Search Bot.** \n**Using Me You Can Fetch Torrent Magnet, Youtube Videos Link, Jio Saavan Music Links** \n**(C) @Bot_Gram_Developers**",
                       buttons=[
-                      [Button.switch_inline("Search Youtube", query="yt ", same_peer=True)],
-                      [Button.switch_inline("Search Torrent", query="torrent ", same_peer=True)],
-                      [Button.switch_inline("Search JioMusic", query="jm ", same_peer=True)],
+                      [Button.switch_inline("✳️Search Youtube✳️", query="yt ", same_peer=True)],
+                      [Button.switch_inline("✳️Search Torrent✳️", query="torrent ", same_peer=True)],
+                      [Button.switch_inline("✳️Search JioMusic✳️", query="jm ", same_peer=True)],
                               ]
                      )
 @torrentbot.on(events.NewMessage(pattern="^/repo$"))
 async def search(event):
-    await event.reply('<b><u>Here is My Repo</b></u> <code>https://github.com/StarkGang/StreamSearchRoBot</code>', parse_mode="HTML")
+    await event.reply('<b><u>Here is My Repo</b></u> <code>https://github.com/Rocky572/StreamSearchRoBot</code>', parse_mode="HTML")
 
 @torrentbot.on(events.InlineQuery(pattern=r"torrent (.*)"))
 async def inline_id_handler(event: events.InlineQuery.Event):
